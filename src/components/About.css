@@ -1,0 +1,24 @@
+.about-section {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #fefefe, #f5f9fc);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  color: #0077ff;
+  margin-bottom: 30px;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
