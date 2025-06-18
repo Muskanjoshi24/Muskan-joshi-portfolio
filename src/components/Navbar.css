@@ -2,61 +2,51 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  flex-wrap: wrap; /* ✅ Wraps on small screens */
+  padding: 14px 20px;
   background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  position: sticky; /* ✅ Sticky navbar without hiding content */
   top: 0;
+  width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   color: #0077ff;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap; /* ✅ Wraps on mobile */
+  justify-content: flex-end;
+  gap: 12px;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
+.nav-links li a:hover {
+  background-color: #f0f0f0;
 }
 
-@media screen and (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    background: white;
-    width: 100%;
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-    text-align: center;
+/* Optional: Shrink font on very small screens */
+@media screen and (max-width: 600px) {
+  .nav-links li a {
+    font-size: 14px;
+    padding: 6px 8px;
   }
 }
